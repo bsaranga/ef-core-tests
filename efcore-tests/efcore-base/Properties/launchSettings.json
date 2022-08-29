@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "efcore-base": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL",
+      "distributionName": "Ubuntu-22.04"
+    }
+  }
+}
