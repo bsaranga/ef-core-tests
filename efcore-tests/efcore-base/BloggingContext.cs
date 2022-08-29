@@ -8,7 +8,14 @@ namespace efcore_base
 {
     public class BloggingContext : DbContext
     {
-        private const string CONNECTION_STRING = "Host=localhost;Database=testdb_1;Username=root;Password=root";
+        private string CONNECTION_STRING = "Host=localhost;Database=#db_name#;Username=root;Password=root";
+
+        public BloggingContext(string dbname)
+        {
+            var split_conn_string = CONNECTION_STRING.Split('#');
+            CONNECTION_STRING = split_conn_string[0] + dbname + split_conn_string[2];
+            Console.WriteLine(CONNECTION_STRING);
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
