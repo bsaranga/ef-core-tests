@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\efcore-base\efcore-base.csproj" />
+    <ProjectReference Include="..\exploring-relationships\exploring-relationships.csproj" />
   </ItemGroup>
 
 </Project>
